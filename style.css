@@ -22,27 +22,6 @@
   box-sizing: border-box;
 }
 
-/* Skip link for accessibility */
-.skip-link {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  z-index: 10001;
-  transition: all 0.3s ease;
-}
-
-.skip-link:focus {
-  top: 10px;
-  outline: 3px solid #fff;
-  outline-offset: 2px;
-}
 
 html {
   scroll-behavior: smooth;
