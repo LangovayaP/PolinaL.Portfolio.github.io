@@ -8,6 +8,19 @@
     <meta name="keywords" content="graphic design, portfolio, branding, character design, Helsinki, Finland">
     <meta name="author" content="Polina Langovaya">
     
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="Polina Langovaya - Graphic Designer Portfolio">
+    <meta property="og:description" content="Professional graphic designer portfolio showcasing creative design work including branding, character design, and editorial layouts.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="pic/Polina2.png">
+    <meta property="og:url" content="https://polinalangovaya.com">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Polina Langovaya - Graphic Designer Portfolio">
+    <meta name="twitter:description" content="Professional graphic designer portfolio showcasing creative design work including branding, character design, and editorial layouts.">
+    <meta name="twitter:image" content="pic/Polina2.png">
+    
     <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,14 +30,17 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
+    <!-- Skip to main content for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <div class="main">
         <nav class="navbar">
             <img src="pic/Logo.png" class="logo" alt="Polina Langovaya Logo">
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">☰</label>
+            <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu"
+                   aria-expanded="false" aria-controls="navigation-menu">
+            <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">&#9776;</label>
             
-            <ul>
+            <ul id="navigation-menu" role="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -32,6 +48,7 @@
             </ul>
         </nav>
 
+        <main id="main-content">
         <section id="home" class="hero">
             <div class="decorative-shapes">
                 <div class="shape shape-1"></div>
@@ -47,11 +64,11 @@
                 <a href="#contact" class="hero-btn"><span>Get In Touch</span></a>
                 
                 <div class="hero-social">
-                    <a href="https://www.behance.net/PolinaLaku" target="_blank" rel="noopener">
-                        <ion-icon name="logo-behance"></ion-icon>
+                    <a href="https://www.behance.net/PolinaLaku" target="_blank" rel="noopener" aria-label="Visit my Behance portfolio">
+                        <ion-icon name="logo-behance" aria-hidden="true"></ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/polina-langovaya-4b556928b/" target="_blank" rel="noopener">
-                        <ion-icon name="logo-linkedin"></ion-icon>
+                    <a href="https://www.linkedin.com/in/polina-langovaya-4b556928b/" target="_blank" rel="noopener" aria-label="Connect on LinkedIn">
+                        <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
                     </a>
                 </div>
             </div>
@@ -61,7 +78,6 @@
             </div>
         </section>
     </div>
-
 
     <section id="about" class="about-container" data-aos="fade-up">
         <h2 class="about-title">About Me</h2>
@@ -78,20 +94,20 @@
         <div class="skills" data-aos="fade-up" data-aos-delay="200">
             <h3>My Skills</h3>
             <div class="skill-grid">
-                <div class="skill-item">
-                    <ion-icon name="color-palette-outline"></ion-icon>
+                <div class="skill-item" tabindex="0">
+                    <ion-icon name="color-palette-outline" aria-hidden="true"></ion-icon>
                     <span>Visual Design</span>
                 </div>
-                <div class="skill-item">
-                    <ion-icon name="brush-outline"></ion-icon>
+                <div class="skill-item" tabindex="0">
+                    <ion-icon name="brush-outline" aria-hidden="true"></ion-icon>
                     <span>Illustration</span>
                 </div>
-                <div class="skill-item">
-                    <ion-icon name="desktop-outline"></ion-icon>
+                <div class="skill-item" tabindex="0">
+                    <ion-icon name="desktop-outline" aria-hidden="true"></ion-icon>
                     <span>Digital Art</span>
                 </div>
-                <div class="skill-item">
-                    <ion-icon name="camera-outline"></ion-icon>
+                <div class="skill-item" tabindex="0">
+                    <ion-icon name="camera-outline" aria-hidden="true"></ion-icon>
                     <span>Photo Editing</span>
                 </div>
             </div>
@@ -112,7 +128,7 @@
             <div class="mivida-showcase">
                 <div class="mivida-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="mivida-image-wrapper">
-                        <img src="pic/Mivida_mainos_1.png" alt="Mivida Beauty Studio Services Advertisement" loading="lazy" 
+                        <img src="pic/Mivida_mainos_1.png" alt="Mivida Beauty Studio Services Advertisement" loading="lazy" decoding="async" 
                              class="mivida-image lightbox-trigger" 
                              data-title="Mivida Services" 
                              data-description="Comprehensive beauty studio services including manicure, pedicure, electro-epilation, hair removal, cosmetic treatments, eyelash extensions, and eyebrow styling.">
@@ -121,7 +137,7 @@
 
                 <div class="mivida-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="mivida-image-wrapper">
-                        <img src="pic/Mivida_mainos_2.png" alt="Mivida Electro-Epilation Treatment Advertisement" loading="lazy" 
+                        <img src="pic/Mivida_mainos_2.png" alt="Mivida Electro-Epilation Treatment Advertisement" loading="lazy" decoding="async" 
                              class="mivida-image lightbox-trigger" 
                              data-title="Elektroepilatio" 
                              data-description="Specialized electro-epilation treatment advertisement highlighting professional hair removal services with elegant Finnish design aesthetics.">
@@ -142,7 +158,7 @@
       
         <div class="portfolio-item" data-aos="fade-right">
             <div class="column-left">
-                <img class="image-port" src="pic/tapahtumajuliste1 jazz.jpg" alt="Jazz Festival Poster" loading="lazy" width="300" height="400">
+                <img class="image-port" src="pic/tapahtumajuliste1 jazz.jpg" alt="Jazz Festival Poster" loading="lazy" decoding="async" width="300" height="400">
             </div>
             <div class="column-right">
                 <h2>Jazz Festival Poster</h2>
@@ -175,13 +191,13 @@
                 </div>
             </div>
             <div class="column-right-img">
-                <img class="image-port-right" src="pic/mouse.jpg" alt="Mouse Advertisement Poster" loading="lazy" width="300" height="400">
+                <img class="image-port-right" src="pic/mouse.jpg" alt="Mouse Advertisement Poster" loading="lazy" decoding="async" width="300" height="400">
             </div>
         </div>
 
         <div class="portfolio-item" data-aos="fade-right">
             <div class="column-left">
-                <img class="image-port" src="pic/magazine1.jpg" alt="Magazine Mockup Page 1" loading="lazy" width="300" height="400">
+                <img class="image-port" src="pic/magazine1.jpg" alt="Magazine Mockup Page 1" loading="lazy" decoding="async" width="300" height="400">
             </div>
             <div class="column-right">
                 <h2>Magazine Layout Design</h2>
@@ -200,7 +216,7 @@
 
         <div class="portfolio-item" data-aos="fade-left">
             <div class="column-left">
-                <img class="image-port" src="pic/magazine2.jpg" alt="Magazine Mockup Page 2" loading="lazy" width="300" height="400">
+                <img class="image-port" src="pic/magazine2.jpg" alt="Magazine Mockup Page 2" loading="lazy" decoding="async" width="300" height="400">
             </div>
             <div class="column-right">
                 <h2>Magazine Spread Continuation</h2>
@@ -219,19 +235,19 @@
         <div class="soap-collection-section" data-aos="fade-up">
             <div class="soap-layout">
                 <div class="soap-grid">
-                    <img src="pic/token_mango_FONT.png" alt="Mangosaippua - Mango Hand Soap Design" loading="lazy" 
+                    <img src="pic/token_mango_FONT.png" alt="Mangosaippua - Mango Hand Soap Design" loading="lazy" decoding="async" 
                          class="soap-image lightbox-trigger" 
                          data-title="Mangosaippua" 
                          data-description="Premium mango-scented hand soap with tropical essence. The warm, golden packaging reflects the natural sweetness and exotic appeal of mango, creating a luxurious hand care experience."
                          data-aos="fade-right" data-aos-delay="100">
 
-                    <img src="pic/token_rusu_FON.png" alt="Ruususaippua - Rose Hand Soap Design" loading="lazy" 
+                    <img src="pic/token_rusu_FON.png" alt="Ruususaippua - Rose Hand Soap Design" loading="lazy" decoding="async" 
                          class="soap-image lightbox-trigger" 
                          data-title="Ruususaippua" 
                          data-description="Delicate rose-infused hand soap capturing the essence of blooming gardens. The elegant pink design with floral motifs embodies romance and sophistication in premium hand care."
                          data-aos="fade-right" data-aos-delay="200">
 
-                    <img src="pic/token_vanilla_FON.png" alt="Vaniljasaippua - Vanilla Hand Soap Design" loading="lazy" 
+                    <img src="pic/token_vanilla_FON.png" alt="Vaniljasaippua - Vanilla Hand Soap Design" loading="lazy" decoding="async" 
                          class="soap-image lightbox-trigger" 
                          data-title="Vaniljasaippua" 
                          data-description="Rich vanilla-scented hand soap with warm, comforting notes. The creamy beige packaging with vanilla bean imagery evokes luxury and timeless sophistication in hand care."
@@ -260,13 +276,13 @@
         <div class="lovecraft-section" data-aos="fade-up">
             <div class="lovecraft-layout">
                 <div class="lovecraft-grid">
-                    <img src="pic/Yithit.png" alt="Yithit - Lovecraft Game Character" loading="lazy" 
+                    <img src="pic/Yithit.png" alt="Yithit - Lovecraft Game Character" loading="lazy" decoding="async" 
                          class="lovecraft-image lightbox-trigger" 
                          data-title="Yithit Character" 
                          data-description="Character design inspired by the Great Race of Yith from Lovecraft's cosmic horror universe. An ancient being capable of mind transference across time and space."
                          data-aos="fade-right" data-aos-delay="100">
 
-                    <img src="pic/Azathoth.png" alt="Azathoth - Lovecraft Game Character" loading="lazy" 
+                    <img src="pic/Azathoth.png" alt="Azathoth - Lovecraft Game Character" loading="lazy" decoding="async" 
                          class="lovecraft-image lightbox-trigger" 
                          data-title="Azathoth Character" 
                          data-description="Character design for Azathoth, the Daemon Sultan and Blind Idiot God from Lovecraft's mythology. The nuclear chaos at the center of the universe, surrounded by fluting demons."
@@ -298,29 +314,30 @@
         <p>I'm always excited to work on new projects and bring creative ideas to life</p>
         <a href="#contact" class="cta-button"><span>Start a Project</span></a>
     </section>
+    </main>
 
     <footer id="contact" class="footer">
         <h3 data-aos="fade-up">Get In Touch</h3>
         <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
             <p>
-                <ion-icon name="mail-outline"></ion-icon>
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
                 <a href="mailto:langovayam24@gmail.com">langovayam24@gmail.com</a>
             </p>
             <p>
-                <ion-icon name="call-outline"></ion-icon>
+                <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
                 <a href="tel:+358406626455">+358 406626455</a>
             </p>
             <p>
-                <ion-icon name="location-outline"></ion-icon>
+                <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
                 Helsinki, Finland
             </p>
         </div>
         <div class="social-footer" data-aos="fade-up" data-aos-delay="200">
-            <a href="https://www.behance.net/PolinaLaku" target="_blank" rel="noopener">
-                <ion-icon name="logo-behance"></ion-icon>
+            <a href="https://www.behance.net/PolinaLaku" target="_blank" rel="noopener" aria-label="Visit my Behance portfolio">
+                <ion-icon name="logo-behance" aria-hidden="true"></ion-icon>
             </a>
-            <a href="https://www.linkedin.com/in/polina-langovaya-4b556928b/" target="_blank" rel="noopener">
-                <ion-icon name="logo-linkedin"></ion-icon>
+            <a href="https://www.linkedin.com/in/polina-langovaya-4b556928b/" target="_blank" rel="noopener" aria-label="Connect on LinkedIn">
+                <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
             </a>
         </div>
         <p class="copyright">© 2024 Polina Langovaya. All rights reserved.</p>
