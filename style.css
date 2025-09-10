@@ -453,7 +453,11 @@ ul li a:hover {
   margin: 100px auto;
   max-width: 1200px;
   padding: 100px 60px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(248, 250, 252, 0.9) 100%
+  );
   backdrop-filter: blur(20px);
   border-radius: 40px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
@@ -469,7 +473,12 @@ ul li a:hover {
   right: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, rgba(96, 165, 250, 0.1) 0%, rgba(168, 85, 247, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(96, 165, 250, 0.1) 0%,
+    rgba(168, 85, 247, 0.1) 50%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
   animation: rotate 25s linear infinite;
 }
 
@@ -531,7 +540,7 @@ ul li a:hover {
   box-shadow: var(--shadow-soft);
 }
 
-@keyframes pulse {
+@keyframes titlePulse {
   0%,
   100% {
     transform: scale(1);
@@ -554,10 +563,366 @@ ul li a:hover {
   margin-bottom: 100px;
   opacity: 0;
   animation: fadeInUp 0.8s ease forwards;
+  padding: 60px 40px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-item:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+/* Mivida Section - Elegant black and gold */
+.mivida-section {
+  margin: 100px 0;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: white;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+.mivida-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(212, 175, 55, 0.08) 0%,
+    rgba(184, 134, 11, 0.04) 50%,
+    rgba(217, 119, 6, 0.06) 100%
+  );
+  animation: rotate 40s linear infinite;
+  pointer-events: none;
+}
+
+.mivida-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.mivida-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #c4a484 0%, #d4af37 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.mivida-header p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.mivida-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mivida-info {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Jazz Festival - Elegant musical theme */
+.portfolio-item:nth-child(3) {
+  background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+  color: white;
+  position: relative;
+}
+
+.portfolio-item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.06) 0%,
+    transparent 60%
+  );
+  animation: float 25s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.portfolio-item:nth-child(3) h2 {
+  color: #f1f5f9;
+  text-shadow: 0 2px 6px rgba(30, 41, 59, 0.4);
+}
+
+.portfolio-item:nth-child(3) p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Gaming Mouse - Premium gaming aesthetic */
+.portfolio-item:nth-child(4) {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  position: relative;
+}
+
+.portfolio-item:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(16, 185, 129, 0.12) 0%,
+    rgba(59, 130, 246, 0.12) 50%,
+    rgba(147, 51, 234, 0.12) 100%
+  );
+  pointer-events: none;
+}
+
+.portfolio-item:nth-child(4) h2 {
+  color: #22d3ee;
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+}
+
+.portfolio-item:nth-child(4) p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Magazine Layout Design - Fresh juice vibes */
+.portfolio-item:nth-child(5) {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  color: #15803d;
+  position: relative;
+}
+
+.portfolio-item:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(
+    circle,
+    rgba(34, 197, 94, 0.08) 0%,
+    transparent 65%
+  );
+  animation: float 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.portfolio-item:nth-child(5) h2 {
+  color: #16a34a;
+  text-shadow: 0 2px 4px rgba(22, 163, 74, 0.3);
+}
+
+.portfolio-item:nth-child(5) p {
+  color: #166534;
+}
+
+/* Magazine Layout 2 - Clean modern continuation */
+.portfolio-item:nth-child(6) {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+  color: #1e40af;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.portfolio-item:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.06) 0%,
+    transparent 70%
+  );
+  animation: float 22s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+.portfolio-item:nth-child(6) h2 {
+  color: #4338ca;
+  text-shadow: 0 2px 4px rgba(67, 56, 202, 0.2);
+}
+
+.portfolio-item:nth-child(6) p {
+  color: #1e40af;
+}
+
+/* Soap Collection - Luxury cream and gold */
+.soap-collection-section {
+  margin: 80px 0;
+  padding: 60px 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(254, 252, 232, 0.95) 0%,
+    rgba(253, 230, 138, 0.9) 100%
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  box-shadow: 0 25px 60px rgba(180, 83, 9, 0.15),
+    0 10px 30px rgba(217, 119, 6, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.soap-collection-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(212, 175, 55, 0.05) 0%,
+    rgba(255, 215, 0, 0.03) 50%,
+    rgba(218, 165, 32, 0.05) 100%
+  );
+  animation: floatRotate 30s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatRotate {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(5deg);
+  }
+}
+
+/* Lovecraft Section - Dark cosmic horror theme */
+.lovecraft-section {
+  margin: 100px 0;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a1a2a 100%);
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(139, 69, 19, 0.3);
+  color: white;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+.lovecraft-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(139, 69, 19, 0.08) 0%,
+    rgba(75, 0, 130, 0.05) 50%,
+    rgba(128, 0, 0, 0.06) 100%
+  );
+  animation: rotate 45s linear infinite;
+  pointer-events: none;
+}
+
+.lovecraft-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.lovecraft-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  flex: 0 0 400px;
+}
+
+.lovecraft-image {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(139, 69, 19, 0.3), 0 8px 25px rgba(75, 0, 130, 0.2);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.lovecraft-image:hover {
+  transform: translateX(10px) scale(1.05) !important;
+  box-shadow: 0 25px 60px rgba(139, 69, 19, 0.4), 0 15px 40px rgba(75, 0, 130, 0.3) !important;
+  z-index: 10 !important;
+}
+
+.lovecraft-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lovecraft-header {
+  margin-bottom: 40px;
+}
+
+.lovecraft-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 50%, #654321 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.lovecraft-header p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+.lovecraft-info {
+  position: relative;
+  z-index: 2;
 }
 
 .column-left,
@@ -689,6 +1054,350 @@ ul li a:hover {
   font-weight: 600;
   font-size: 1rem;
   display: block;
+}
+
+/* Soap Collection Grid Styles */
+
+.soap-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.soap-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  flex: 0 0 400px;
+}
+
+.collection-content {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.collection-header {
+  margin-bottom: 40px;
+}
+
+.collection-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.collection-header p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.soap-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center;
+  transform: translateX(0) scale(1);
+}
+
+.soap-image:hover {
+  transform: translateX(10px) scale(1.15) !important;
+  box-shadow: 0 20px 40px rgba(236, 72, 153, 0.25) !important;
+  z-index: 10 !important;
+}
+
+.collection-info {
+  position: relative;
+  z-index: 2;
+}
+
+.lightbox-trigger {
+  cursor: pointer;
+}
+
+.mivida-card {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4),
+    0 8px 20px rgba(255, 215, 0, 0.3), 0 4px 10px rgba(218, 165, 32, 0.2);
+  cursor: pointer;
+}
+
+.mivida-card img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: -5%;
+  margin-right: -5%;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1199px) and (min-width: 993px) {
+  .info {
+    margin: 60px 30px;
+    padding: 60px 30px;
+  }
+
+  .about-container {
+    margin: 80px 30px;
+    padding: 80px 50px;
+  }
+
+  .lovecraft-layout,
+  .soap-layout {
+    gap: 40px;
+  }
+
+  .lovecraft-grid,
+  .soap-grid {
+    flex: 0 0 350px;
+  }
+
+  .mivida-showcase {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mivida-card img {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.mivida-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+.mivida-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mivida-info {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Focus states for accessibility */
+*:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.lightbox-trigger:focus,
+.hero-btn:focus,
+.cta-button:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 3px;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Modern Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  padding: 20px;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.active .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10001;
+  transition: all 0.3s ease;
+  font-weight: 300;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.lightbox-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: all;
+  opacity: 0.7;
+}
+
+.lightbox-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.lightbox-btn ion-icon {
+  font-size: 1.4rem;
+  color: white;
+}
+
+/* Portfolio Links */
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: var(--pink-gradient);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.portfolio-link:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.portfolio-link span,
+.portfolio-link ion-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--pink-glow);
+}
+
+.portfolio-link ion-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover ion-icon {
+  transform: translateX(5px);
 }
 
 /* Project Tags */
@@ -1035,6 +1744,101 @@ ul li a:hover {
     margin-bottom: 60px;
   }
 
+  .soap-collection-section {
+    margin: 60px 20px;
+    padding: 40px 20px;
+  }
+
+  .soap-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .soap-grid {
+    flex: none;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .collection-content {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .collection-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .soap-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .soap-image:hover {
+    transform: translateX(10px) scale(1.15);
+    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.25);
+    z-index: 10;
+  }
+
+  .mivida-section {
+    margin: 60px 20px;
+    padding: 50px 20px;
+  }
+
+  .lovecraft-section {
+    margin: 60px 20px;
+    padding: 50px 20px;
+  }
+
+  .lovecraft-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .lovecraft-grid {
+    flex: none;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .lovecraft-image {
+    max-width: 100%;
+  }
+
+  .lovecraft-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .mivida-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .mivida-showcase {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mivida-card {
+    width: 100%;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .lightbox-nav {
+    padding: 0 15px;
+  }
+
+  .lightbox-caption {
+    padding: 25px 20px;
+  }
+
+  .lightbox-caption h3 {
+    font-size: 2rem;
+  }
+
   .social-links {
     gap: 20px;
   }
@@ -1197,6 +2001,11 @@ ul li a:hover {
   .social-footer ion-icon {
     font-size: 1.3rem;
   }
+
+  .portfolio-link {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
 }
 
 /* Decorative Shapes */
@@ -1243,7 +2052,7 @@ ul li a:hover {
   top: 25%;
   left: 20%;
   transform: rotate(45deg);
-  animation: pulse 6s ease-in-out infinite;
+  animation: shapePulse 6s ease-in-out infinite;
 }
 
 .shape-4 {
@@ -1256,7 +2065,7 @@ ul li a:hover {
   animation: float 12s linear infinite;
 }
 
-@keyframes pulse {
+@keyframes shapePulse {
   0%,
   100% {
     transform: scale(1);
@@ -1364,5 +2173,117 @@ ul li a:hover {
 
   .footer h3 {
     font-size: 1.5rem;
+  }
+
+  .portfolio-link {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .soap-collection-section {
+    margin: 40px 15px;
+    padding: 30px 15px;
+  }
+
+  .soap-layout {
+    gap: 30px;
+  }
+
+  .collection-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .collection-header p {
+    font-size: 1rem;
+  }
+
+  .soap-grid {
+    gap: 18px;
+    max-width: 100%;
+  }
+
+  .soap-image {
+    border-radius: 12px;
+    max-width: 300px;
+  }
+
+  .mivida-section {
+    margin: 40px 15px;
+    padding: 40px 15px;
+    border-radius: 25px;
+  }
+
+  .lovecraft-section {
+    margin: 40px 15px;
+    padding: 40px 15px;
+    border-radius: 25px;
+  }
+
+  .lovecraft-grid {
+    gap: 15px;
+  }
+
+  .lovecraft-header h2 {
+    font-size: 2rem;
+  }
+
+  .mivida-header h2 {
+    font-size: 2rem;
+  }
+
+  .mivida-header p {
+    font-size: 1rem;
+  }
+
+  .mivida-showcase {
+    gap: 25px;
+  }
+
+  .mivida-card {
+    width: 100%;
+  }
+
+  .overlay-content {
+    padding: 20px;
+  }
+
+  .overlay-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .view-detail {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  .lightbox {
+    padding: 15px;
+  }
+
+  .lightbox-img {
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 8px;
+  }
+
+  .lightbox-close {
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+  }
+
+  .lightbox-nav {
+    padding: 0 20px;
+  }
+
+  .lightbox-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .lightbox-btn ion-icon {
+    font-size: 1.2rem;
   }
 }
